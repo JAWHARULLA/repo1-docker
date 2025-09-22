@@ -15,6 +15,12 @@ pipeline {
         bat 'dir /B /S'
       }
     }
+            stage('GIT Checkout Code') {
+            steps {
+                checkout scm
+            }
+        }
+
 
     stage('Build Docker image') {
       steps {
